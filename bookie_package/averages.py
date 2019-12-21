@@ -15,11 +15,9 @@ def avg_goal_diff(df, avg_h_a_diff, a_h_team, a_h_goal_diff):
     avg_per_team = {}
     all_teams = df[a_h_team].unique()
     for t in all_teams:
-        df_team = df[df[a_h_team]==t]
-        result = df_team['{}TGDIFF'.format(a_h_goal_diff)].rolling(
-            len(df_team[a_h_team]), win_type=None, min_periods=0
-        ).mean()
-        df_team[avg_h_a_diff] = result.values[::-1]
+        df_team = df[df[a_h_team]==t].fillna(0)
+        result = df_team['{}TGDIFF'.format(a_h_goal_diff)].rolling(10).mean()
+        df_team[avg_h_a_diff] = result.shift(-9)
         avg_per_team[t] = df_team
     return avg_per_team
 
@@ -28,11 +26,9 @@ def avg_goals(df,h_or_a_avg, h_or_a_team, h_or_a_letter):
     avg_goals_team = {}
     all_teams = df[h_or_a_team].unique()
     for t in all_teams:
-        df_team = df[df[h_or_a_team]==t]
-        result = df_team['FT{}G'.format(h_or_a_letter)].rolling(
-             len(df_team[h_or_a_team]), win_type=None, min_periods=0
-        ).mean()
-        df_team[h_or_a_avg] = result.values[::-1]
+        df_team = df[df[h_or_a_team]==t].fillna(0)
+        result = df_team['FT{}G'.format(h_or_a_letter)].rolling(10).mean()
+        df_team[h_or_a_avg] = result.shift(-9)
         avg_goals_team[t] = df_team
     return avg_goals_team
 
