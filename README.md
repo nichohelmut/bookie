@@ -29,21 +29,21 @@ The questions I will target:
 
 ## File Descriptions <a name="files"></a>
 
-D1.csv: contains match related data from all football matches from the actual German Bundesliga season
-D1_last.csv: contains match related data from all football matches from the last German Bundesliga season
-D2.csv: contains match related data from all football matches from the last German second Bundesliga season
+1. D1.csv: contains match related data from all football matches from the actual German Bundesliga season
+2. D1_last.csv: contains match related data from all football matches from the last German Bundesliga season
+3. D2.csv: contains match related data from all football matches from the last German second Bundesliga season
 All files downloaded from: https://www.football-data.co.uk/germanym.php
-df_both_seasons_essentials: pickle file with results from load_and_clean.ipynb; contains clean and merged data from D1.csv, D1_last.csv and D2.csv
-df_both_seasons_home.xlsx: goal prediction from home teams
-df_both_seasons_away.xlsx: goal prediction from away teams
+4. df_both_seasons_essentials: pickle file with results from load_and_clean.ipynb; contains clean and merged data from D1.csv, D1_last.csv and D2.csv
+5. df_both_seasons_home.xlsx: goal prediction from home teams
+6. df_both_seasons_away.xlsx: goal prediction from away teams
  
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
 Must give credit to Udacity courses for some of code ideas, and to football-data.co.uk for the data. You can find the Licensing for the data and other descriptive information at the football-data.co.uk link available [here](https://www.football-data.co.uk/germanym.php). Otherwise, feel free to use the code here as you would like!
 
 References
-[1] https://www.football-data.co.uk/germanym.php
-[2] https://dashee87.github.io/football/python/predicting-football-results-with-statistical-modelling/
-[3]https://www.sciencedirect.com/science/article/pii/S2210832717301485?via%3Dihub
-[4] https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
-[5] https://arxiv.org/pdf/1710.02824.pdf
+1. https://www.football-data.co.uk/germanym.php
+2. https://dashee87.github.io/football/python/predicting-football-results-with-statistical-modelling/
+3. https://www.sciencedirect.com/science/article/pii/S2210832717301485?via%3Dihub
+4. https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
+5. https://arxiv.org/pdf/1710.02824.pdf
