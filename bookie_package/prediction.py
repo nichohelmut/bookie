@@ -1,12 +1,6 @@
-from scipy.optimize import curve_fit
 import pandas as pd
-import seaborn as sns
 import numpy as np
 import scipy 
-import matplotlib.pyplot as plt
-import matplotlib.style as style
-import itertools
-from sklearn.linear_model import LogisticRegression
 import sys
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import RandomizedSearchCV
@@ -33,7 +27,7 @@ def random_forrest(
 def random_search(train_features,train_labels, n_estimators=1000, n_iter=10, cv=3):
     # Hyperparameter grid
     param_grid = {
-    'n_estimators': np.linspace(10, n_estimators).astype(int),
+        'n_estimators': np.linspace(10, n_estimators).astype(int),
         'max_depth': [None] + list(np.linspace(3, 20).astype(int)),
         'max_features': ['auto', 'sqrt', None] + list(np.arange(0.5, 1, 0.1)),
         'max_leaf_nodes': [None] + list(np.linspace(10, 50, 500).astype(int)),
@@ -51,3 +45,24 @@ def random_search(train_features,train_labels, n_estimators=1000, n_iter=10, cv=
     # Fit 
     rs.fit(train_features,train_labels)
     return rs
+
+def performance_accuracy(test_labels,test_features, rf):
+    """
+    input:
+        test_labels
+        test_features
+        rf = random forest regressor
+    output:
+        Mean Absolute Error
+        Accuracy
+    """
+    # Use the forest's predict method on the test data
+    predictions = rf.predict(test_features)
+
+    # Calculate the absolute errors
+    errors = abs(abs(np.round(predictions,0)) - test_labels)
+
+    # Print out the mean absolute error (mae)
+    accuracy = (errors==0).sum() / len(errors) * 100
+    print('Mean Absolute Error:', round(np.mean(errors),2), 'Goals.')
+    print('Accuracy:', round(accuracy, 2), '%.')

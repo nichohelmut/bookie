@@ -35,3 +35,4 @@ def line_plot(df_result, labels, predictions,feature_list,test_features):
     predictions_data = pd.DataFrame(data = {'date': test_dates, 'prediction': predictions})
 
     return true_data, predictions_data
+    
