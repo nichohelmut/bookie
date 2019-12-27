@@ -4,11 +4,12 @@
 2. [Instructions](#instructions)
 2. [Project Motivation](#motivation)
 3. [File Description](#files)
-4. [Licensing, Authors, and Acknowledgements](#licensing)
+4. [Medium Blog Post](#medium)
+5. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## Installation <a name="installation"></a>
 
-There should be no necessary libraries to run the code here beyond the Anaconda distribution of Python. The code should run with no issues using Python versions 3.*.
+There should be no necessary libraries to run the code here beyond the Anaconda distribution of Python. The code should run with no issues using Python versions 3.*. Additionly please install: python3 install pydot
 
 ## Instructions <a name ="instructions"></a>
 1. Run load_and_clean.ipynb
@@ -37,6 +38,10 @@ All files downloaded from: https://www.football-data.co.uk/germanym.php
 5. df_both_seasons_home.xlsx: goal prediction from home teams
 6. df_both_seasons_away.xlsx: goal prediction from away teams
  
+## Medium Blog Post<a name="medium">
+Please find here the medium blog post: 
+https://medium.com/@nicholasutikal/predict-football-results-with-random-forest-c3e6f6e2ee58
+
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
 Must give credit to Udacity courses for some of code ideas, and to football-data.co.uk for the data. You can find the Licensing for the data and other descriptive information at the football-data.co.uk link available [here](https://www.football-data.co.uk/germanym.php). Otherwise, feel free to use the code here as you would like!
@@ -47,3 +52,5 @@ References
 3. https://www.sciencedirect.com/science/article/pii/S2210832717301485?via%3Dihub
 4. https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
 5. https://arxiv.org/pdf/1710.02824.pdf
+6. https://towardsdatascience.com/random-forest-in-python-24d0893d51c0
+7. https://towardsdatascience.com/improving-random-forest-in-python-part-1-893916666cd

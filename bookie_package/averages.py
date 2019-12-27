@@ -8,6 +8,8 @@ def avg_goal_diff(df, avg_h_a_diff, a_h_team, a_h_goal_letter):
         avg_h_a_diff = name of the new column
         a_h_team = HomeTeam or AwayTeam
         a_h_goal_letter = 'H' for home or 'A' for away
+    output: 
+        avg_per_team = dictionary with with team as key and columns as values with new column H/ATGDIFF
     """
     df[avg_h_a_diff] = 0
     avg_per_team = {}
@@ -53,6 +55,9 @@ def previous_data(df, h_or_a_team, column):
         df = dataframe with all results
         a_h_team = HomeTeam or AwayTeam
         column = column selected to get previous data from
+    output:
+        team_with_past_dict = dictionary with team as a key and columns as values with new 
+                              columns with past value
     """
     d = dict()
     team_with_past_dict = dict()
