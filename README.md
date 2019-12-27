@@ -40,7 +40,7 @@ All files downloaded from: https://www.football-data.co.uk/germanym.php
  
 ## Medium Blog Post<a name="medium">
 Please find here the medium blog post: 
-https://medium.com/@nicholasutikal/predict-football-results-with-random-forest-c3e6f6e2ee58
+https://medium.com/@nicholasutikal/predict-football-results-with-random-forest-c3e6f6e2ee58?
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
